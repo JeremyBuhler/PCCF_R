@@ -8,22 +8,17 @@ email@address.ca <!-- .element style="color:lightblue" -->
 
 ---
 
-<!-- .slide: data-transition="none-in slide-out" -->
+<!-- .slide: data-transition="none-in none-out" -->
 ### Steps 
 1. Download PCCF+ files
 3. Modify PCCF+ R script
 4. Run PCCF+ R script
 
 
---
-
-
-
-
 
 ---
 
-<!-- .slide: data-background="green" data-transition="slide-in none-out" -->
+<!-- .slide: data-background="green" data-transition="none-in slide-out" -->
 ## 1. Download PCCF+ files 
 
 
@@ -36,6 +31,7 @@ Find desired PCCF+ at <https://odesi.ca>
 
 ---
 
+<!-- .slide: data-transition="none-out -->
 ... 
 
 
@@ -44,19 +40,22 @@ Find desired PCCF+ at <https://odesi.ca>
 <!-- .slide: data-background="green" data-transition="none-in slide-out" -->
 ## 2. Modify PCCF+ R script
 
-
-
-
-
 ---
 
 Open your copy of the PCCF+ R script in RStudio, then update the script as shown in the next slides
 
 ---
 
-This is the script as downloaded
+<div class="r-stack">
+	  <p class="fragment fade-out" data-fragment-index="1">This is the script as downloaded</p>
+	  <p class="fragment fade-in-then-out" data-fragment-index="1">Set <em>installDir</em> to the full path of your project directory</p>
+	  <p class="fragment fade-in-then-out" data-fragment-index="2">Set <em>inData</em> to the directory of your dataset</p>
+	  <p class="fragment fade-in-then-out" data-fragment-index="3">Set <em>inFile</em> to the name of your dataset (without file extension)</p>
+	  <p class="fragment" data-fragment-index="4">Set <em>outData</em> (the output directory path) and <em>outName</em> (the output file name, without extension)</p>
+	</div>
 
-```r[]
+
+<pre><code data-trim data-noescape data-line-numbers="|44|53|55|77-78" data-fragment-index="1">
 # PCCF+ Version 8D
 # 
 # R routine for automated geographic coding from postal codes using the Postal Code Conversion
@@ -224,41 +223,21 @@ buildKeepStatement()
 
 # Run the line below to execute the rest of the program, which does not require any modification
 source(paste0(installDir, "/DATA_R/PCCFplus_8D_do_not_edit.R"))
+</pre></code>
 
 
-```
-
----
-
-<!-- .slide: data-auto-animate="true" -->
-
-Update this line...
-
-```r [42: 2-3]
-
-# Step 1: Set the installation folder path
-installDir <- "//stpcflr-sasfs50/Saslibe/PCCFplus_FCCPplus/Processing/Programs/PCCF8D"
-
-
-```
 
 ---
 
-<!-- .slide: data-auto-animate="true" -->
+Slides can go forward, or extra content can be down below
 
-...and these...
+--
 
-
-```r [50: 4,6]
-
-# Set the input data library (folder path where dataset is located)
-
-inData <- "//stpcflr-sasfs50/Saslibe/PCCFplus_FCCPplus/Processing/Programs/PCCF8D/sample" # Folder path
-
-inFile <- "sampledat" # File name (without extension)
-
-```
+Like this
 
 ---
 
-...and so on!
+End of sample
+
+---
+
