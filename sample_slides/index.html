@@ -1,58 +1,47 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
 
-		<title>PCCF+ R program</title>
+		<title>reveal.js</title>
 
+		<link rel="stylesheet" href="../reveal.js/dist/reset.css" />
+		<link rel="stylesheet" href="../reveal.js/dist/reveal.css" />
+		<link rel="stylesheet" href="../reveal.js/dist/theme/black.css" />
 
-		<link rel="stylesheet" href="../reveal.js/dist/reset.css">
-		<link rel="stylesheet" href="../reveal.js/dist/reveal.css">
-		<link rel="stylesheet" href="../reveal.js/dist/theme/white.css">
-		<!--		<link rel="stylesheet" href="../custom.css"> -->
-
-
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../reveal.js/dist/plugin/highlight/monokai.css" />
 	</head>
 	<body>
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-
-
-				<!-- Slide content imported form markdown file -->
 
 				<section data-markdown="slide_content.md"
 						data-separator="^---"
          				data-separator-vertical="^--">
 				</section>
 
-				<!-- end of slide content -->
-
 			</div>
 		</div>
 
 		<script src="../reveal.js/dist/reveal.js"></script>
-		<!-- <script src="../reveal.js/plugin/zoom/zoom.js"></script> -->
-		<script src="../reveal.js/plugin/notes/plugin.js"></script>
-		<script src="../reveal.js/plugin/markdown/plugin.js"></script>
-		<script src="../reveal.js/plugin/highlight/plugin.js"></script>
+		<script src="../reveal.js/dist/plugin/notes.js"></script>
+		<script src="../reveal.js/dist/plugin/markdown.js"></script>
+		<script src="../reveal.js/dist/plugin/highlight.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
-							progress: true,
-							center: true,
-							hash: true,
+				hash: true,
 
-							transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-
-							// Learn about plugins: https://revealjs.com/plugins/
-							plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-						});
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+			});
 		</script>
 	</body>
 </html>
